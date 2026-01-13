@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Full screen gradient background */
+.app {
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #667eea, #764ba2, #43cea2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.title {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Search section */
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* Input box */
+.search-box input {
+  flex: 1;
+  padding: 12px 15px;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-box input:focus {
+  border-color: #43cea2;
+}
+
+/* Button */
+.search-box button {
+  padding: 12px 18px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #43cea2, #185a9d);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.search-box button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Error message */
+.error {
+  color: #ffcccc;
+  margin-top: 10px;
+}
+
+/* Weather card */
+.weather-card {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  color: #fff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-card h2 {
+  margin-bottom: 10px;
+}
+
+.weather-card p {
+  margin: 6px 0;
+  font-size: 1.05rem;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    width: 100%;
+  }
+}
